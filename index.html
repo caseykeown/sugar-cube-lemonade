@@ -843,12 +843,56 @@
 
   /* MOBILE */
   @media (max-width: 768px) {
-    .about-grid,
-    .find-us-grid { grid-template-columns: 1fr; }
-    .menu-card.featured { grid-column: span 1; }
+
+    /* NAV */
     .nav-links { display: none; }
+
+    /* HERO */
+    .hero { padding: 5rem 1.25rem 4rem; }
+    .hero-eyebrow {
+      text-align: center;
+      width: 100%;
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+    }
     .hero-logo-img { width: min(320px, 90vw); }
+    .hero-taglines { justify-content: center; }
+    .hero-location { text-align: center; }
+    .hero-cta { flex-direction: column; align-items: center; }
+    .hero-cta .btn { width: 100%; max-width: 300px; text-align: center; }
+
+    /* ABOUT */
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .stat-row { justify-content: center; }
+    .stat-item { min-width: 80px; }
+
+    /* MENU */
+    .menu-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .menu-card { grid-column: span 1 !important; }
+    .menu-card.star { grid-column: span 1 !important; }
+
+    /* Sour Riot card — stack vertically on mobile */
+    .menu-card[style*="grid-template-columns"] {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .menu-card[style*="grid-template-columns"] > div:last-child {
+      width: 100% !important;
+    }
+    .menu-card[style*="grid-template-columns"] img {
+      width: 100% !important;
+      height: 220px !important;
+    }
+
+    /* FIND US */
+    .find-us-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+    /* MISC */
     .product-showcase { grid-template-columns: 1fr; }
+    .section-title { font-size: clamp(2rem, 10vw, 3rem); }
   }
 
   /* SCROLL REVEAL */
